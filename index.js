@@ -1,5 +1,6 @@
 'use strict'
 const _ = require('lodash')
+const Promise = require('bluebird')
 
 module.exports = function loadAllPages (arr, callFx, opts) {
   opts['page'] = opts.page || 1
