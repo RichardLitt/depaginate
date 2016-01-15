@@ -1,0 +1,38 @@
+{
+  "name": "depaginate",
+  "version": "0.0.0",
+  "description": "Consume paginated APIs and return a giant array",
+  "license": "MIT",
+  "repository": "RichardLitt/depaginate",
+  "author": {
+    "name": "Richard Littauer",
+    "email": "richard.littauer@gmail.com",
+    "url": "burntfen.com"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "standard && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {
+    "lodash": "^4.0.0"
+  },
+  "devDependencies": {
+    "standard": "^5.4.1",
+    "xo": "^0.12.1"
+  },
+  "standard": {
+    "ignores": [
+      "test.js"
+    ]
+  }
+}
