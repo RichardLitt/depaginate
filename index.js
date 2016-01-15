@@ -1,17 +1,18 @@
 'use strict'
 const _ = require('lodash')
 const Promise = require('bluebird')
+const arr = []
 
-module.exports = function loadAllPages (arr, callFx, opts) {
+module.exports = function loadAllPages (callFx, opts) {
   opts['page'] = opts.page || 1
 
-  return Promise.try(function () {
+  return Promise.resolve().then(function () {
     return callFx(opts)
   }).then(function (result) {
     arr.push(result)
     if (_.isFunction(result.nextPage)) {
       opts.page = opts.page + 1
-      return loadAllPages(arr, callFx, opts)
+      return loadAllPages(callFx, opts)
     } else {
       return Promise.resolve(_.flatten(arr))
     }
