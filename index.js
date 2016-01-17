@@ -18,7 +18,7 @@ module.exports = function loadAllPages (callFx, opts) {
     }
   }).catch(function (err) {
     if (err) {
-      console.log('Failed to depaginate')
+      console.log('Failed to depaginate\n', err)
     }
   })
 }
