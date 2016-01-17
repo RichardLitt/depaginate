@@ -1,6 +1,6 @@
 {
   "name": "depaginate",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Consume paginated APIs and return a giant array",
   "license": "MIT",
   "repository": "RichardLitt/depaginate",
