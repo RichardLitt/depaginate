@@ -1,7 +1,7 @@
 'use strict'
 const _ = require('lodash')
 const Promise = require('bluebird')
-const arr = []
+var arr = []
 
 module.exports = function loadAllPages (callFx, opts) {
   opts['page'] = opts.page || 1
@@ -14,11 +14,13 @@ module.exports = function loadAllPages (callFx, opts) {
         opts.page = opts.page + 1
         return loadAllPages(callFx, opts)
       } else {
-        return Promise.resolve(_.flatten(arr))
+        var newArr = arr
+        arr = []
+        return _.flatten(newArr)
       }
     }).catch((err) => {
       if (err) {
         console.log('Failed to depaginate\n', err)
       }
-  })
+    })
 }
