@@ -10,7 +10,7 @@ module.exports = function loadAllPages (callFx, opts) {
     .resolve(callFx(opts))
     .then((result) => {
       arr.push(result)
-      if (_.isFunction(result.nextPage)) {
+      if (result && _.isFunction(result.nextPage)) {
         opts.page = opts.page + 1
         return loadAllPages(callFx, opts)
       } else {
@@ -18,9 +18,12 @@ module.exports = function loadAllPages (callFx, opts) {
         arr = []
         return _.flatten(newArr)
       }
-    }).catch((err) => {
+    })
+    .catch((err) => {
       if (err) {
-        console.log('Failed to depaginate\n', err)
+        console.log('Failed to depaginate!\n', err)
+        console.log('Options:', opts)
+        console.trace()
       }
     })
 }
