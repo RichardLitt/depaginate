@@ -1,6 +1,6 @@
 {
   "name": "depaginate",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Consume paginated APIs and return a giant array",
   "license": "MIT",
   "repository": "RichardLitt/depaginate",
@@ -36,7 +36,7 @@
     ]
   },
   "coordinates": [
-    42.3891005,
-    -71.1202314
+    42.37382909999999,
+    -71.11026
   ]
 }
