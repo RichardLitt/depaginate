@@ -9,7 +9,7 @@ module.exports = function loadAllPages (callFx, opts) {
   return Promise
     .resolve(callFx(opts))
     .then((result) => {
-      arr.push(result)
+      arr.push((result.items) ? result.items : result)
       if (result && _.isFunction(result.nextPage)) {
         opts.page = opts.page + 1
         return loadAllPages(callFx, opts)
