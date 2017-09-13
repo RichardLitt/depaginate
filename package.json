@@ -27,8 +27,8 @@
     "lodash": "^4.0.0"
   },
   "devDependencies": {
-    "standard": "^5.4.1",
-    "xo": "^0.12.1"
+    "standard": "^10.0.3",
+    "xo": "^0.18.2"
   },
   "standard": {
     "ignores": [
