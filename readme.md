@@ -1,5 +1,7 @@
 # depaginate [![Build Status](https://travis-ci.org/RichardLitt/depaginate.svg?branch=master)](https://travis-ci.org/RichardLitt/depaginate)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/RichardLitt/depaginate.svg)](https://greenkeeper.io/)
+
 > Consume paginated APIs and return a giant array
 
 This is a helper function which works best with the GitHub v3 api. I am more than happy to extend it to other APIs as needed.
